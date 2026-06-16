@@ -23,6 +23,7 @@ class StudentDashboard extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
+        titleSpacing: 8,
         title: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -34,13 +35,19 @@ class StudentDashboard extends ConsumerWidget {
               ),
               child: Image.asset(
                 'assets/images/fast_logo-removebg-preview.png',
-                width: 30,
-                height: 30,
+                width: 26,
+                height: 26,
                 fit: BoxFit.contain,
               ),
             ),
-            const SizedBox(width: 10),
-            const Text('FAST Hostel System'),
+            const SizedBox(width: 6),
+            const Flexible(
+              child: Text(
+                'FAST Hostel',
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(fontSize: 16),
+              ),
+            ),
           ],
         ),
         actions: [
